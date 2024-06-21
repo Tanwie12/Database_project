@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import CpuUsage from './components/CpuUsage';
+import MemoryUsage from './components/MemoryUsage';
+import StorageUsage from './components/StorageUsage';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <div className="App">
+            <h1>Oracle DB Resource Monitoring Dashboard</h1>
+            <CpuUsage />
+            <MemoryUsage />
+            <StorageUsage />
+        </div>
+    );
+};
 
 export default App;
