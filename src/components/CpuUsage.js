@@ -7,9 +7,9 @@ const CpuUsage = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3000/cpu')
+        axios.get('http://localhost:5000/system-usage')
             .then(response => {
-                const rows = response.data;
+                const rows = response.data.cpu;
                 const statNames = rows.map(row => row[0]);
                 const values = rows.map(row => row[1]);
                 setData([{ x: statNames, y: values, type: 'bar' }]);
